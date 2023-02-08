@@ -26,6 +26,10 @@ export default function Textarea() {
     const copy = ()=>{
         navigator.clipboard.writeText(text)
     }
+    const clear = ()=>{
+        let myclear = "";
+        setText(myclear);
+    }
     const changeUp = (e)=>{
         setText(e.target.value)
     }
@@ -41,6 +45,7 @@ export default function Textarea() {
         <button className="btn btn-primary mx-1" onClick={toUp}>To uppercase</button>
         <button className="btn btn-primary mx-1" onClick={toLow}>To lowercase</button>
         <button className="btn btn-primary mx-1" onClick={copy}>Copy to clipboard</button>
+        <button className="btn btn-primary mx-1" onClick={clear}>Clear</button>
         <button className="btn btn-primary mx-1" onClick={downloadFile}>Download</button>
     </div>
     <div className="container my-3">
